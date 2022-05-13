@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
                          Center(
                            child: Text("Sign in", style: TextStyle(fontSize: 20),) ,
                          ),
-                         SizedBox(height: 30,),
+                         
                          
                       ],
                 ),
