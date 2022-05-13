@@ -29,7 +29,10 @@ class _LoginState extends State<Login> {
                   keyboardType: TextInputType.number,
                 ),
                 const SizedBox(height: 50,),
-                SizedBox(
+                Container(
+                  decoration:const  BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(2)),
+                  ),
                   height: 60,
                   width: 300,
                   child: ElevatedButton(
@@ -42,6 +45,11 @@ class _LoginState extends State<Login> {
                     child: const Text('VALIDERS')),
                   
                ),
+               const SizedBox(height: 40,),
+               const SizedBox(
+                 child: Text("Pour plus d'infos", 
+                    style: TextStyle(color: Colors.blue),),
+               )
             ],
           ),
        ),   
