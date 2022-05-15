@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
        body: Padding(
           padding: const EdgeInsets.all(50),
-          child:  Column(
+          child:  ListView(
             children:  [
                  const SizedBox(height: 200),
                  const Image(image: AssetImage('assets/images/equity-bank-logo.png')),
