@@ -12,7 +12,14 @@ class _accueilState extends State<accueil> {
     return Scaffold(
         appBar: AppBar(
            title: const Text("Accueil"),
+           actions:const [
+             IconButton(
+               onPressed: null, 
+               icon: Icon(Icons.person, color: Colors.white,),
+              ),
+          ],
         ),
+        
     );
   }
 }
