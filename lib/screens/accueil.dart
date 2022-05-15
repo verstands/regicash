@@ -20,7 +20,11 @@ class _accueilState extends State<accueil> {
           ],
         ),
         body: Container(
-           
+           child: Column(
+             children: [
+                
+             ],
+           ),
         ),
     );
   
