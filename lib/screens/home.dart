@@ -32,9 +32,12 @@ class _HomeState extends State<Home> {
                        obscureText: false,
                     ),
                     const SizedBox(height: 50,),
-                    SizedBox(
+                    Container(
                       height: 50,
                       width: 350,
+                      decoration:  BoxDecoration(
+                         borderRadius: BorderRadius.circular(1.0),
+                      ),
                       child : ElevatedButton(
                       onPressed: () { 
                       Navigator.push(
