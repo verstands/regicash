@@ -77,41 +77,20 @@ class _accueilState extends State<accueil> {
                     ),
                    Card(
                     child:  Padding(
-                      padding: EdgeInsets.all(20),
+                      padding:  const EdgeInsets.all(20),
                         child: Column(
-                           
-                           children:  [
-                               const TextField(
-                                 decoration: InputDecoration(
-                                    labelText: 'Numero de telephone',
-                                    icon: Icon(Icons.phone),
-                                 ),
-                                 keyboardType: TextInputType.number,
-                               ),
-                               const SizedBox(height: 30,),
-                               const TextField(
-                                 decoration: InputDecoration(
-                                    labelText: 'Devise',
-                                    icon: Icon(Icons.money_off),
-                                 ),
-                                 keyboardType: TextInputType.text,
-                               ),
-                              const SizedBox(height: 50,),
-                               Container(
-                              height: 50,
-                              width: 350,
-                              decoration:  BoxDecoration(
-                                borderRadius: BorderRadius.circular(1.0),
-                              ),
-                              child : ElevatedButton(
-                              onPressed: () { 
-                              Navigator.push(
-                                context, 
-                                MaterialPageRoute(builder: (context) => const accueil()),
-                              );
-                            }, 
-                              child: const Text('PAYER'))
-                            )
+                           children:   [
+                              Padding(
+                                padding: const EdgeInsets.all(5),
+                                child: Center(
+                                   child:  Column(
+                                      children: const [
+                                      Image(image: AssetImage('assets/images/money.png')),
+                                      SizedBox(height: 10,),
+                                      Image(image: AssetImage('assets/images/carte.png')),
+                                  ],),
+                                ),
+                              ),  
                            ],
                         )
                       ),

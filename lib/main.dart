@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:regicash/screens/accueil.dart';
 import 'package:regicash/screens/home.dart';
 import 'package:regicash/screens/login.dart';
+import 'package:regicash/screens/paiement.dart';
 
 const d_red = const Color(0xFFE9717D);
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const accueil(),
+      home: const Paiement(),
     );
   }
 }
