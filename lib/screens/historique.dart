@@ -1,26 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:regicash/screens/qrcode.dart';
 
-class publicite extends StatefulWidget {
-  const publicite({ Key? key }) : super(key: key);
+class Historique extends StatefulWidget {
+  const Historique({ Key? key }) : super(key: key);
 
   @override
-  State<publicite> createState() => _publiciteState();
+  State<Historique> createState() => _HistoriqueState();
 }
 
-class _publiciteState extends State<publicite> {
+class _HistoriqueState extends State<Historique> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-           title: const Text("Publicité"),
-              actions:const [
+           title: const Text("Mon historique"),
+           actions: [
                 IconButton(
-                  onPressed: null, 
-                  icon: Icon(Icons.logout, color: Colors.white,),
-                  ),
-              ],
+                    onPressed: () {
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => const Qrcode()));
+                    }, 
+                    icon: const Icon(Icons.qr_code, color: Colors.white,),
+                ),
+                IconButton(
+                    onPressed: () {
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => const Historique()));
+                    }, 
+                    icon: const Icon(Icons.picture_as_pdf, color: Colors.white,),
+                ),
+           ],
         ),
-        body: Padding(
+       body: Padding(
                 padding: const EdgeInsets.all(20),
                   child : ListView(
                       children: [
@@ -106,6 +117,7 @@ class _publiciteState extends State<publicite> {
                         const SizedBox(height: 10,),
                       ],
                   ),
+                  
               ),
          floatingActionButton:const FloatingActionButton.small(
                 onPressed: null, 

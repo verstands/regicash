@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:regicash/screens/historique.dart';
+import 'package:regicash/screens/home.dart';
 class accueil extends StatefulWidget {
   const accueil({ Key? key }) : super(key: key);
 
@@ -16,16 +18,26 @@ class _accueilState extends State<accueil> {
            child: Scaffold(
               appBar: AppBar(
                 title: const Text("Accueil"),
-                actions:const [
+                actions: [
+                    IconButton(
+                    onPressed: () {
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => const Historique()));
+                    }, 
+                    icon: const Icon(Icons.history, color: Colors.white,),
+                    ),
                   IconButton(
-                    onPressed: null, 
-                    icon: Icon(Icons.logout, color: Colors.white,),
+                    onPressed: () {
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => const Historique()));
+                    }, 
+                    icon:const Icon(Icons.logout, color: Colors.white,),
                     ),
                 ],
                 bottom: const TabBar(tabs: [
-                  Tab(child: Icon(Icons.home) ),
-                  Tab(child: Icon(Icons.money_off)),
-                  Tab(child: Icon(Icons.public)),
+                  Tab(child: Text("Les annonces") ),
+                  Tab(child: Text("Paiement")),
+                  Tab(child:  Text('Publicité'),),
                 ],),
               ),
               body:  TabBarView(
@@ -79,23 +91,75 @@ class _accueilState extends State<accueil> {
                     child:  Padding(
                       padding:  const EdgeInsets.all(20),
                         child: Column(
-                           children:   [
-                              Padding(
-                                padding: const EdgeInsets.all(5),
-                                child: Center(
-                                   child:  Column(
-                                      children: const [
-                                      Image(image: AssetImage('assets/images/money.png')),
-                                      SizedBox(height: 10,),
-                                      Image(image: AssetImage('assets/images/carte.png')),
-                                  ],),
-                                ),
-                              ),  
+                           children: const  [
+                              Image(image: AssetImage('assets/images/money.png'), height: 100,),
+                              SizedBox(height: 10,),
+                              Image(image: AssetImage('assets/images/carte.png')),  
                            ],
                         )
                       ),
                  ),
-                  const Card( child: Text('je vais bien'),),
+                   Card( 
+                     child: Padding(
+                       padding: const EdgeInsets.all(20),
+                          child: ListView(
+                             children: [
+                                Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),
+                                Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),Container(
+                                  height: 40,
+                                  width: 90,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(height: 10,),
+                             ],
+                          ),
+                       ),   
+                  ),
                 ],
               ),
               floatingActionButton:const FloatingActionButton.small(
