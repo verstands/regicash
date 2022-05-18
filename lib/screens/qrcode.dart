@@ -12,7 +12,7 @@ class _QrcodeState extends State<Qrcode> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Qrcode'),
+          title: const Text('Qrcode'),
         ),
         body: Column(
            mainAxisAlignment: MainAxisAlignment.center,
