@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:regicash/screens/notification.dart';
 import 'package:regicash/screens/qrcode.dart';
 
 class Historique extends StatefulWidget {
@@ -29,6 +30,10 @@ class _HistoriqueState extends State<Historique> {
                     }, 
                     icon: const Icon(Icons.picture_as_pdf, color: Colors.white,),
                 ),
+                IconButton(
+                  onPressed: null, 
+                  icon: Icon(Icons.search, color: Colors.white,),
+                  ),
            ],
         ),
        body: Padding(
@@ -119,10 +124,14 @@ class _HistoriqueState extends State<Historique> {
                   ),
                   
               ),
-         floatingActionButton:const FloatingActionButton.small(
-                onPressed: null, 
-                child: Icon(Icons.notifications_on),
-         ),
+         floatingActionButton: FloatingActionButton.small(
+                onPressed: () { 
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context) => const notification()),
+                      );
+                    },
+                child: const Icon(Icons.notifications_on),),
     );
   }
 }

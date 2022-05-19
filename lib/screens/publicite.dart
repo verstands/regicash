@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:regicash/screens/notification.dart';
 
 class publicite extends StatefulWidget {
   const publicite({ Key? key }) : super(key: key);
@@ -107,10 +108,14 @@ class _publiciteState extends State<publicite> {
                       ],
                   ),
               ),
-         floatingActionButton:const FloatingActionButton.small(
-                onPressed: null, 
-                child: Icon(Icons.notifications_on),
-         ),
+         floatingActionButton: FloatingActionButton.small(
+                onPressed: () { 
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context) => const notification()),
+                      );
+                    },
+                child: const Icon(Icons.notifications_on),),
     );
   }
 }

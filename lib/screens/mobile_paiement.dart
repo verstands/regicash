@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:regicash/screens/home.dart';
+import 'package:regicash/screens/notification.dart';
 
 class Paiement extends StatefulWidget {
   const Paiement({ Key? key }) : super(key: key);
@@ -18,6 +19,10 @@ class _PaiementState extends State<Paiement> {
                 IconButton(
                   onPressed: null, 
                   icon: Icon(Icons.logout, color: Colors.white,),
+                  ),
+                IconButton(
+                  onPressed: null, 
+                  icon: Icon(Icons.search, color: Colors.white,),
                   ),
               ],
         ),
@@ -61,6 +66,14 @@ class _PaiementState extends State<Paiement> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton.small(
+                onPressed: () { 
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context) => const notification()),
+                      );
+                    },
+                child: const Icon(Icons.notifications_on),),
     );
   }
 }

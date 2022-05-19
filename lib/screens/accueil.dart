@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:regicash/screens/carte_paiement.dart';
 import 'package:regicash/screens/historique.dart';
 import 'package:regicash/screens/home.dart';
+import 'package:regicash/screens/mobile_paiement.dart';
+import 'package:regicash/screens/notification.dart';
 class accueil extends StatefulWidget {
   const accueil({ Key? key }) : super(key: key);
 
@@ -33,6 +36,10 @@ class _accueilState extends State<accueil> {
                     }, 
                     icon:const Icon(Icons.logout, color: Colors.white,),
                     ),
+                const IconButton(
+                  onPressed: null, 
+                  icon: Icon(Icons.search, color: Colors.white,),
+                  ),
                 ],
                 bottom: const TabBar(tabs: [
                   Tab(child: Text("Les annonces") ),
@@ -91,10 +98,14 @@ class _accueilState extends State<accueil> {
                     child:  Padding(
                       padding:  const EdgeInsets.all(20),
                         child: Column(
-                           children: const  [
-                              Image(image: AssetImage('assets/images/money.png'), height: 100,),
-                              SizedBox(height: 10,),
-                              Image(image: AssetImage('assets/images/carte.png')),  
+                           children:   [
+                              ListTile(
+                               title : const Image(image: AssetImage('assets/images/money.png'), height: 100,),onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Paiement()),),
+                              ),
+                              const SizedBox(height: 10,),
+                              ListTile(
+                               title : const Image(image: AssetImage('assets/images/carte.png'), height: 100,),onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const carte()),),
+                              ), 
                            ],
                         )
                       ),
@@ -162,9 +173,14 @@ class _accueilState extends State<accueil> {
                   ),
                 ],
               ),
-              floatingActionButton:const FloatingActionButton.small(
-                onPressed: null, 
-                child: Icon(Icons.notifications_on),),
+             floatingActionButton: FloatingActionButton.small(
+                onPressed: () { 
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context) => const notification()),
+                      );
+                    },
+                child: const Icon(Icons.notifications_on),),
             ) ,
           ),
     );
