@@ -3,6 +3,7 @@ import 'package:regicash/screens/carte_paiement.dart';
 import 'package:regicash/screens/historique.dart';
 import 'package:regicash/screens/mobile_paiement.dart';
 import 'package:regicash/screens/notification.dart';
+import 'package:regicash/screens/voir.dart';
 import 'package:video_player/video_player.dart';
 class accueil extends StatefulWidget {
   const accueil({ Key? key }) : super(key: key);
@@ -214,17 +215,20 @@ class _accueilState extends State<accueil> {
                                      color : Colors.white70,
                                   ),
                                   child: Row(
-                                    children: const [
-                                       SizedBox(
+                                    children:  [
+                                       const SizedBox(
                                           height: 90,
                                           width: 60,
                                             child: Image(image: AssetImage('assets/images/un.PNG')),
                                        ),
-                                       Text(" samll \n 12.5M"),
-                                       SizedBox(width: 170,),
+                                      const  Text(" samll \n 12.5M",),
+                                       const SizedBox(width: 170,),
                                        IconButton(
-                                         onPressed: null, 
-                                         icon: Icon(Icons.play_circle, color: Colors.red,)
+                                         onPressed: () {
+                                            Navigator.push(context, 
+                                            MaterialPageRoute(builder: (context) => const Voir()));
+                                          }, 
+                                         icon: const Icon(Icons.play_circle, color: Colors.red,)
                                         ),
                                     ],
                                   ),
