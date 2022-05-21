@@ -18,6 +18,10 @@ class _notificationState extends State<notification> {
                   onPressed: null, 
                   icon: Icon(Icons.logout, color: Colors.white,),
                   ),
+              IconButton(
+                  onPressed: null, 
+                  icon: Icon(Icons.search, color: Colors.white,),
+                  ),
            ],
         ),
         body: Padding(

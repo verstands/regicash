@@ -55,41 +55,30 @@ class _accueilState extends State<accueil> {
                         child: ListView(
                            children: [
                              Container(
-                              color: Colors.blue,
-                              height: 80,
-                            ),
-                            const SizedBox(height: 20,),
-                             Container(
-                              color: Colors.blue,
-                              height: 80,
-                            ),
-                             Container(
-                              color: Colors.blue,
-                              height: 80,
-                            ),
-                            const SizedBox(height: 20,),
-                             Container(
-                              color: Colors.blue,
-                              height: 80,
-                            ),
-                             Container(
-                              color: Colors.blue,
-                              height: 80,
-                            ),
-                            const SizedBox(height: 20,),
-                             Container(
-                              color: Colors.blue,
-                              height: 80,
-                            ),
-                             Container(
-                              color: Colors.blue,
-                              height: 80,
-                            ),
-                            const SizedBox(height: 20,),
-                             Container(
-                              color: Colors.blue,
-                              height: 80,
-                            ),
+                                padding: const EdgeInsets.all(10),
+                                child: Column(
+                                   children: [
+                                      Container(
+                                       child:Image(image: AssetImage('assets/images/equity-bank-logo.png'),),  
+                                      ),
+                                      Container(
+                                        child: const Text('Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, '),
+                                      ),
+                                      SizedBox(height: 10,),
+                                      Row(
+                                         children: const [
+                                            SizedBox(
+                                               height: 50,
+                                               width: 50,
+                                               child:Image(image: AssetImage('assets/images/equity-bank-logo.png'),),  
+                                               
+                                            )
+                                         ],
+                                      ) 
+                                   ],
+                                ),
+                              ),
+                                const SizedBox(height: 20,),
                            ],
                         )
                       ),
