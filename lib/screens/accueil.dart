@@ -163,7 +163,11 @@ class _accueilState extends State<accueil> {
                    Card(
                     child: Column(
                          children: [
-                            const Image(image: AssetImage('assets/images/paiement.jpg'), height: 100,),
+                            Container(
+                              width: 200,
+                              height: 500,
+                             child : Image(image: AssetImage('assets/images/paiement.jpg'), height: 100,),
+                            )
                          ],
                     ),
                  ),
