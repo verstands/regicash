@@ -181,70 +181,55 @@ class _accueilState extends State<accueil> {
                           child: ListView(
                              children: [
                                 Container(
-                                  height: 40,
-                                  width: 90,
+                                  height: 60,
+                                  width: 40,
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                     borderRadius: BorderRadius.circular(20),
+                                     color : Colors.white70,
+                                  ),
                                   child: Row(
                                     children: const [
                                        SizedBox(
-                                          height: 50,
-                                          width: 50,
-                                            child: Image(image: AssetImage('asset/images/un.PNG')),
+                                          height: 90,
+                                          width: 60,
+                                            child: Image(image: AssetImage('assets/images/un.PNG')),
                                        ),
-                                       Text("samll \n 12.5M"),
+                                       Text(" samll \n 12.5M"),
+                                       SizedBox(width: 170,),
                                        IconButton(
                                          onPressed: null, 
-                                         icon: Icon(Icons.play_circle)
+                                         icon: Icon(Icons.play_circle, color: Colors.red,)
                                         ),
                                     ],
                                   ),
                                 ),
                                 const SizedBox(height: 10,),
                                 Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
+                                  height: 60,
+                                  width: 40,
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                     borderRadius: BorderRadius.circular(20),
+                                     color : Colors.white70,
+                                  ),
+                                  child: Row(
+                                    children: const [
+                                       SizedBox(
+                                          height: 90,
+                                          width: 60,
+                                            child: Image(image: AssetImage('assets/images/un.PNG')),
+                                       ),
+                                       Text(" samll \n 12.5M"),
+                                       SizedBox(width: 170,),
+                                       IconButton(
+                                         onPressed: null, 
+                                         icon: Icon(Icons.play_circle, color: Colors.red,)
+                                        ),
+                                    ],
+                                  ),
                                 ),
-                                const SizedBox(height: 10,),Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
-                                ),
-                                const SizedBox(height: 10,),Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
-                                ),
-                                const SizedBox(height: 10,),Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
-                                ),
-                                const SizedBox(height: 10,),Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
-                                ),
-                                const SizedBox(height: 10,),Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
-                                ),
-                                const SizedBox(height: 10,),Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
-                                ),
-                                const SizedBox(height: 10,),Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
-                                ),
-                                const SizedBox(height: 10,),Container(
-                                  height: 40,
-                                  width: 90,
-                                  color: Colors.blue,
-                                ),
-                                const SizedBox(height: 10,),
+                                
                              ],
                           ),
                        ),   
