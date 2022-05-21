@@ -4,7 +4,7 @@ import 'package:regicash/screens/historique.dart';
 import 'package:regicash/screens/mobile_paiement.dart';
 import 'package:regicash/screens/notification.dart';
 import 'package:regicash/screens/voir.dart';
-import 'package:video_player/video_player.dart';
+
 class accueil extends StatefulWidget {
   const accueil({ Key? key }) : super(key: key);
 
@@ -161,20 +161,11 @@ class _accueilState extends State<accueil> {
                       ),
                     ),
                    Card(
-                    child:  Padding(
-                      padding:  const EdgeInsets.all(20),
-                        child: Column(
-                           children:   [
-                              ListTile(
-                               title : const Image(image: AssetImage('assets/images/money.png'), height: 100,),onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Paiement()),),
-                              ),
-                              const SizedBox(height: 10,),
-                              ListTile(
-                               title : const Image(image: AssetImage('assets/images/carte.png'), height: 100,),onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const carte()),),
-                              ), 
-                           ],
-                        )
-                      ),
+                    child: Column(
+                         children: [
+                            const Image(image: AssetImage('assets/images/paiement.jpg'), height: 100,),
+                         ],
+                    ),
                  ),
                    Card( 
                      child: Padding(
