@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:regicash/screens/carte_paiement.dart';
 import 'package:regicash/screens/historique.dart';
-import 'package:regicash/screens/home.dart';
 import 'package:regicash/screens/mobile_paiement.dart';
 import 'package:regicash/screens/notification.dart';
+import 'package:video_player/video_player.dart';
 class accueil extends StatefulWidget {
   const accueil({ Key? key }) : super(key: key);
 
@@ -12,6 +12,8 @@ class accueil extends StatefulWidget {
 }
 
 class _accueilState extends State<accueil> {
+  
+
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
@@ -66,19 +68,93 @@ class _accueilState extends State<accueil> {
                                       ),
                                       SizedBox(height: 10,),
                                       Row(
-                                         children: const [
-                                            SizedBox(
-                                               height: 50,
-                                               width: 50,
-                                               child:Image(image: AssetImage('assets/images/equity-bank-logo.png'),),  
-                                               
+                                         children:  [
+                                            const SizedBox(
+                                               height: 40,
+                                               width: 40,
+                                               child:Image(image: AssetImage('assets/images/equity-bank-logo.png'),),     
+                                            ),
+                                            Row(
+                                              children : const [
+                                                  Text("  RMC Sport - 1j", style: TextStyle(fontSize: 10,),),
+                                                  SizedBox(width: 100,),
+                                                  IconButton(
+                                                    onPressed: null, 
+                                                    icon: Icon(Icons.favorite, color: Colors.red,)),
+                                              ]                                            
                                             )
                                          ],
-                                      ) 
+                                      ), 
                                    ],
                                 ),
                               ),
-                                const SizedBox(height: 20,),
+                              const Divider(height: 20),
+                               Container(
+                                padding: const EdgeInsets.all(10),
+                                child: Column(
+                                   children: [
+                                      Container(
+                                       child:Image(image: AssetImage('assets/images/equity-bank-logo.png'),),  
+                                      ),
+                                      Container(
+                                        child: const Text('Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, '),
+                                      ),
+                                      SizedBox(height: 10,),
+                                      Row(
+                                         children:  [
+                                            const SizedBox(
+                                               height: 40,
+                                               width: 40,
+                                               child:Image(image: AssetImage('assets/images/equity-bank-logo.png'),),     
+                                            ),
+                                            Row(
+                                              children : const [
+                                                  Text("  RMC Sport - 1j", style: TextStyle(fontSize: 10,),),
+                                                  SizedBox(width: 100,),
+                                                  IconButton(
+                                                    onPressed: null, 
+                                                    icon: Icon(Icons.favorite, color: Colors.red,)),
+                                              ]                                            
+                                            )
+                                         ],
+                                      ), 
+                                   ],
+                                ),
+                              ),
+                              const Divider(height: 20),
+                               Container(
+                                padding: const EdgeInsets.all(10),
+                                child: Column(
+                                   children: [
+                                      Container(
+                                       child:Image(image: AssetImage('assets/images/equity-bank-logo.png'),),  
+                                      ),
+                                      Container(
+                                        child: const Text('Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, '),
+                                      ),
+                                      SizedBox(height: 10,),
+                                      Row(
+                                         children:  [
+                                            const SizedBox(
+                                               height: 40,
+                                               width: 40,
+                                               child:Image(image: AssetImage('assets/images/equity-bank-logo.png'),),     
+                                            ),
+                                            Row(
+                                              children : const [
+                                                  Text("  RMC Sport - 1h", style: TextStyle(fontSize: 10,),),
+                                                  SizedBox(width: 100,),
+                                                  IconButton(
+                                                    onPressed: null, 
+                                                    icon: Icon(Icons.favorite, color: Colors.red,)),
+                                              ]                                            
+                                            )
+                                         ],
+                                      ), 
+                                   ],
+                                ),
+                              ),
+                              const Divider(height: 10),
                            ],
                         )
                       ),
@@ -107,7 +183,20 @@ class _accueilState extends State<accueil> {
                                 Container(
                                   height: 40,
                                   width: 90,
-                                  color: Colors.blue,
+                                  child: Row(
+                                    children: const [
+                                       SizedBox(
+                                          height: 50,
+                                          width: 50,
+                                            child: Image(image: AssetImage('asset/images/un.PNG')),
+                                       ),
+                                       Text("samll \n 12.5M"),
+                                       IconButton(
+                                         onPressed: null, 
+                                         icon: Icon(Icons.play_circle)
+                                        ),
+                                    ],
+                                  ),
                                 ),
                                 const SizedBox(height: 10,),
                                 Container(
