@@ -5,6 +5,7 @@ import 'package:regicash/screens/home.dart';
 import 'package:regicash/screens/login.dart';
 import 'package:regicash/screens/mobile_paiement.dart';
 import 'package:regicash/screens/publicite.dart';
+import 'package:regicash/screens/voir.dart';
 
 const d_red = const Color(0xFFE9717D);
 void main() {
