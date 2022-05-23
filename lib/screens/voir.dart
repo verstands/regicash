@@ -45,7 +45,52 @@ class _VoirState extends State<Voir> {
             ),
              ListView(
                 children: [
-                    Text("salut le monde"),
+                    ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/un.PNG",
+                      ),
+                    ),
+                    title: const Text(
+                      'Karine blue',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('je suis un personne....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
+                  ),
+                  ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/deux.PNG",
+                      ),
+                    ),
+                    title: const Text(
+                      'celin dion',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('si tu veux ....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
+                  ),
                 ],
             ),
           ],
