@@ -47,13 +47,6 @@ class _accueilState extends State<accueil> {
                   color: Colors.white,
                 ),
               ),
-              const IconButton(
-                onPressed: null,
-                icon: Icon(
-                  Icons.search,
-                  color: Colors.white,
-                ),
-              ),
             ],
             bottom: const TabBar(
               tabs: [
@@ -226,104 +219,242 @@ class _accueilState extends State<accueil> {
                     )),
               ),
               Card(
-                child: ListTile(
-                  leading: const CircleAvatar(
-                    radius: 25,
-                    backgroundImage: AssetImage(
-                      "assets/images/mpesa.png",
+                  child: ListView(
+                children: [
+                  ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/mpsa.png",
+                      ),
+                    ),
+                    title: const Text(
+                      'Vodacom',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('mpesa....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
+                    onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Paiement()));
+                      },
+                  ),
+                  ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/africel.PNG",
+                      ),
+                    ),
+                    title: const Text(
+                      'Africell',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('Afri-money....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
                     ),
                   ),
-                  title: const Text(
-                    'Vodacom',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/airtel.png",
+                      ),
+                    ),
+                    title: const Text(
+                      'Airtel',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('airtel-money....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
                   ),
-                  subtitle: const Text('mpesa....'),
-                  trailing: IconButton(
-                    icon: const Icon(Icons.arrow_forward),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Voir()));
-                    },
+                  ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/orange.jpg",
+                      ),
+                    ),
+                    title: const Text(
+                      'Orange',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('orange money....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
                   ),
-                ),
-              ),
+                  ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/visa.jpg",
+                      ),
+                    ),
+                    title: const Text(
+                      'Visa',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('carte visa....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
+                  ),
+                  ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/paye.jpg",
+                      ),
+                    ),
+                    title: const Text(
+                      'Pay-Pal',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('paypal....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
+                  ),
+                  ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/carte.png",
+                      ),
+                    ),
+                    title: const Text(
+                      'Carte',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('carte....'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
+                  ),
+                ],
+              )),
               Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: ListView(
-                    children: [
-                      Container(
-                        height: 60,
-                        width: 40,
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white70,
-                        ),
-                        child: Row(
-                          children: const [
-                            SizedBox(
-                              height: 90,
-                              width: 60,
-                              child: Image(
-                                  image: AssetImage('assets/images/un.PNG')),
-                            ),
-                            Text(" samll \n 12.5M"),
-                            SizedBox(
-                              width: 170,
-                            ),
-                            IconButton(
-                                onPressed: null,
-                                icon: Icon(
-                                  Icons.play_circle,
-                                  color: Colors.red,
-                                )),
-                          ],
+                child: ListView(
+                  children: [
+                    ListTile(
+                      leading: const CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage(
+                          "assets/images/un.png",
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
+                      title: const Text(
+                        'celine dion',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
                       ),
-                      Container(
-                        height: 60,
-                        width: 40,
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white70,
+                      subtitle: const Text('lorem '),
+                      trailing: IconButton(
+                        icon: const Icon(
+                          Icons.play_circle,
+                          color: Colors.red,
                         ),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              height: 90,
-                              width: 60,
-                              child: Image(
-                                  image: AssetImage('assets/images/un.PNG')),
-                            ),
-                            const Text(
-                              " samll \n 12.5M",
-                            ),
-                            const SizedBox(
-                              width: 170,
-                            ),
-                            IconButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => const Voir()));
-                                },
-                                icon: const Icon(
-                                  Icons.play_circle,
-                                  color: Colors.red,
-                                )),
-                          ],
-                        ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Voir()));
+                        },
                       ),
-                    ],
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
+                    ListTile(
+                    leading: const CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage(
+                        "assets/images/deux.png",
+                      ),
+                    ),
+                    title: const Text(
+                      'Marine len',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    subtitle: const Text('ecoute moi '),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.play_circle, color: Colors.red,),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
+                    ),
+                    onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Voir()));
+                      },
                   ),
+                  ],
                 ),
               ),
             ],
